@@ -13,17 +13,16 @@ public class Raum {
 		this.geb= geb;
 		this.raum = raum;	
 	}
-	//change toString method from here
 	public String toString() {
 		if(reservierung.size() > 0) {
-			String antwort =this.getGeb()+ "-" + this.getEtage() + "." + this.raum + "\n";
+			String antwort ="Raum " + this.getGeb()+ "-" + this.getEtage() + "." + this.raum + "\n";
 			for(int i = 0; i<reservierung.size();i++) {
 				antwort += "gebucht von " + reservierung.get(i).von.toString()  + " von "+ 
 			reservierung.get(i).getBegin() + " bis " + reservierung.get(i).getEnde()+ "für " + reservierung.get(i).getBemerkung() + "\n";
 			}	
 			return antwort;
 		}
-		return this.getGeb()+ "-" + this.getEtage() + "." + this.getRaum();
+		return "Raum " + this.getGeb()+ "-" + this.getEtage() + "." + this.getRaum();
 
 	}
 	

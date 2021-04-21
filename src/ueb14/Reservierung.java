@@ -37,7 +37,7 @@ public class Reservierung {
 	}
 //write to string
 	public String toString() {
-		return "strng";
+		return  this.getBemerkung() + " Begint um :" + this.getBegin().toString() + "Endet um :" + this.getEnde().toString()+ "Reserviert an :"+ raum.toString();
 	}
 
 
